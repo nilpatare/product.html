@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Preview Design</title>
+    <style>
+        body{
+            background-color: rgb(107, 132, 132);
+        }
+        #main-product-image{
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+            display: block;
+            margin:20px auto;
+        }
+        .product-image{
+            height: 65px;
+            width: 65px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .product-image:hover{
+            border: 2px solid black;
+        }
+        .product-images-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <img src="vivo.jfif" id="main-product-image"/>
+
+    <div class="product-images-container">
+        <img src="iphone.jpg" class="product-image" onclick="changeImage (1)">
+
+        <img src="one plus.jfif" class="product-image" onclick="changeImage (2)">
+
+        <img src="vivo v27.jfif" class="product-image" onclick="changeImage (3)">
+
+        <img src="realme.jfif" class="product-image" onclick="changeImage (4)">
+        
+    </div>
+
+    <script>
+        function changeImage(num){
+            const mainImage = document.getElementById('main-product-image');
+
+            if(num==1){
+                mainImage.src = "iphone.jpg";
+            }else if(num==2){
+                mainImage.src="one plus.jfif";
+            }else if(num==3){
+                mainImage.src="vivo v27.jfif";
+            }else if(num==4){
+                mainImage.src="realme.jfif";
+            }
+        }
+    </script>
+    </script>
 </body>
 </html>
